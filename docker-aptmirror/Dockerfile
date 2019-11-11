@@ -12,4 +12,4 @@ COPY mirror.list /etc/apt/
 
 EXPOSE 9999
 
-ENTRYPOINT ["/usr/local/bin/services.sh"]
+CMD ["/usr/local/bin/services.sh"]
