@@ -9,5 +9,5 @@ EOF
 
 /usr/sbin/cron
 
-(cd /var/spool/apt-mirror/mirror/archive.ubuntu.com && \
+(cd /var/spool/apt-mirror/mirror/archive.ubuntu.com/ubuntu && \
 /usr/bin/python3 -m http.server 9999 --bind 0.0.0.0)
