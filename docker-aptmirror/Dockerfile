@@ -10,4 +10,6 @@ RUN apt-get update && \
 
 COPY mirror.list /etc/apt/
 
+EXPOSE 9999
+
 ENTRYPOINT ["/usr/local/bin/services.sh"]
