@@ -8,4 +8,6 @@ cat <<EOF >/etc/cron.d/apt-mirror
 EOF
 
 /usr/sbin/cron
-/usr/bin/python3 -m http.server 9999 --bind 0.0.0.0
+
+(cd /var/spool/apt-mirror/mirror/archive.ubuntu.com && \
+/usr/bin/python3 -m http.server 9999 --bind 0.0.0.0)
