@@ -6,7 +6,7 @@ COPY services.sh /usr/local/bin/
 
 RUN apt-get update && \
     apt-get install -y python3 apt-mirror && \
-    chmod 7000 /usr/local/bin/services.sh
+    chmod 700 /usr/local/bin/services.sh
 
 COPY mirror.list /etc/apt/
 
