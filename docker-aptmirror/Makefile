@@ -1,4 +1,4 @@
-dockerImage = "ludw/python3:latest"
+dockerImage = "ludw/aptmirror:latest"
 
 .PHONY: docker
 
