@@ -14,7 +14,7 @@ RUN apt-get update && \
       locales \
       python3-pip \
       python3-dev \
-      git vim curl tzdata && \
+      git vim curl tzdata sudo && \
     echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen && \
     ln -fs /usr/share/zoneinfo/Europe/Warsaw /etc/localtime && \
