@@ -13,3 +13,6 @@ COPY mirror.list /etc/apt/
 EXPOSE 9999
 
 CMD ["/usr/local/bin/services.sh"]
+
+
+#docker run -d -p 9999:9999  -v /tankz2/ubuntu:/var/spool/apt-mirror ludw/aptmirror

@@ -26,4 +26,9 @@ deb-src http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe
 #deb-src http://archive.ubuntu.com/ubuntu bionic-proposed main restricted universe multiverse
 #deb-src http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse
 
+#postgresql officials
+deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg main
+
+
 clean http://archive.ubuntu.com/ubuntu
+clean http://apt.postgresql.org/pub/repos/apt
