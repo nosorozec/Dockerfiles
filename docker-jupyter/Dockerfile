@@ -3,8 +3,12 @@ FROM ludw/python3:latest
 
 MAINTAINER Konrad Ludwikowski <ludwikowski@gmail.com>
 
-RUN pip3 install jupyter jupyterlab jupyter-git numpy matplotlib scipy scikit-learn pandas seaborn awscli \
-                 altair vega_datasets notebook vega
+
+RUN pip3 install wheel && \
+    pip3 install jupyterlab jupyter-git numpy matplotlib scipy scikit-learn pandas seaborn awscli \
+                 altair vega_datasets notebook vega pyspark geopandas descartes
+
+ENV PYSPARK_PYTHON=/usr/bin/python3
 
 EXPOSE 8888
 

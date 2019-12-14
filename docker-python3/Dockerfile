@@ -10,10 +10,12 @@ ENV LC_ALL=en_US.UTF-8 \
     DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
       locales \
+      openjdk-8-jdk \
       python3-pip \
       python3-dev \
+      python3-setuptools \
       git vim curl tzdata sudo && \
     echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen && \
