@@ -1,6 +1,6 @@
 ############# config ##################
 #
-# set base_path    /var/spool/apt-mirror
+set base_path    /apt-mirror
 #
 # set mirror_path  $base_path/mirror
 # set skel_path    $base_path/skel
@@ -28,7 +28,6 @@ deb-src http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe
 
 #postgresql officials
 deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg main
-
 
 clean http://archive.ubuntu.com/ubuntu
 clean http://apt.postgresql.org/pub/repos/apt

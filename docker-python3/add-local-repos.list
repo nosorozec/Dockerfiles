@@ -1,0 +1,1 @@
+deb http://192.168.1.11:9999/apt.postgresql.org/pub/repos/apt/ bionic-pgdg main

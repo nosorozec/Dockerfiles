@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Konrad Ludwikowski <ludwikowski@gmail.com>
 
 COPY sources.list /etc/apt/
-
+COPY ACCC4CF8.asc /tmp
 
 ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
@@ -12,6 +12,7 @@ ENV LC_ALL=en_US.UTF-8 \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       locales \
+      gnupg \
       openjdk-8-jdk \
       python3-pip \
       python3-dev \
@@ -22,5 +23,8 @@ RUN apt-get update && \
     ln -fs /usr/share/zoneinfo/Europe/Warsaw /etc/localtime && \
     dpkg-reconfigure tzdata
 
+COPY add-local-repos.list /etc/apt/sources.list.d/
+
+RUN apt-key add /tmp/ACCC4CF8.asc
 
 CMD ["/bin/bash", "-l"]
