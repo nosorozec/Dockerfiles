@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 MAINTAINER Konrad Ludwikowski <ludwikowski@gmail.com>
 
@@ -16,3 +16,4 @@ CMD ["/usr/local/bin/services.sh"]
 
 
 #docker run -d -p 9999:9999  -v /tankz2/apt-mirror:/apt-mirror ludw/aptmirror
+#apt-get install postgresql-12-postgis-3

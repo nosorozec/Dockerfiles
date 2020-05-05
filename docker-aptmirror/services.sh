@@ -2,7 +2,7 @@
 
 
 cat <<EOF >/etc/cron.d/apt-mirror
-# M H
+# min hour day_of_month month day_of_week
 # Regular cron jobs for the apt-mirror package
 0 4    * * *   /usr/bin/apt-mirror > /apt-mirror/cron.log
 EOF
